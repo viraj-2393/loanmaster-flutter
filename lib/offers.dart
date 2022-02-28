@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './loan_form.dart';
 class Offers extends StatelessWidget{
   final String title;
   final String bankName;
@@ -16,6 +17,9 @@ class Offers extends StatelessWidget{
     required this.duration,
     required this.bankIcon
 });
+  void navigate_to_loan_form(BuildContext context){
+    Navigator.of(context).push(MaterialPageRoute(builder: (ctx)=>LoanForm()));
+  }
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -126,7 +130,7 @@ class Offers extends StatelessWidget{
                 ),
                 child: InkWell(
                   borderRadius: BorderRadius.circular(20),
-                  onTap: (){},
+                  onTap: ()=>navigate_to_loan_form(context),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
