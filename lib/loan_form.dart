@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './personal_details.dart';
 class LoanForm extends StatefulWidget{
 
   @override
@@ -14,6 +15,9 @@ class LoanFormState extends State<LoanForm>{
   double month = 20.0;
   double min_month = 10;
   double max_month = 60.0;
+  void navigate_to_personal(BuildContext context){
+    Navigator.of(context).push(MaterialPageRoute(builder: (ctx)=>PersonalDetails()));
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -102,7 +106,7 @@ class LoanFormState extends State<LoanForm>{
                         Text('₹${value}',style: TextStyle(fontSize: 18),),
                         Container(
                           margin: EdgeInsets.only(top:10),
-                          child: Text('You\'re borrowing ₹${value} over ${month.round()} months at 13% p.a with total loan cost of ₹5,00,000. No added fees.'),
+                          child: Text('You\'re borrowing ₹${value} over ${month.round()} months at 13% p.a with total loan cost of ₹5,56,073. No added fees.'),
                         )
                         ,
                       ],
@@ -110,16 +114,20 @@ class LoanFormState extends State<LoanForm>{
                 ),
 
               ]),
-          Container(
-            margin: EdgeInsets.only(bottom: 30),
-            padding: EdgeInsets.only(top:10,left:20,right: 20,bottom: 10),
-            width: 200,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: Theme.of(context).primaryColor
+          InkWell(
+            onTap: ()=>navigate_to_personal(context),
+            child: Container(
+              margin: EdgeInsets.only(bottom: 30),
+              padding: EdgeInsets.only(top:10,left:20,right: 20,bottom: 10),
+              width: 200,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Theme.of(context).primaryColor
+              ),
+              child: Text('continue',textAlign: TextAlign.center,style: TextStyle(color: Colors.white),),
             ),
-            child: Text('continue',textAlign: TextAlign.center,style: TextStyle(color: Colors.white),),
           )
+
         ],
       ) ,
 

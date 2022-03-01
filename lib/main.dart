@@ -49,7 +49,7 @@ class Home extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                'Take you first loan with LoanMaster!',
+                'Take your first loan with LoanMaster!',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 30.0,

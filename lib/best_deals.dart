@@ -16,7 +16,7 @@ class BestDeals extends StatelessWidget{
               title: '5 year Pro Bonanza',
               bankName: 'Citi Bank',
               amount: '4,00,000',
-              monthlyInstalment: '4,000',
+              monthlyInstalment: '9,101.00',
               rate: '13',
               duration: '5',
               bankIcon: 'assets/images/citibank.png',
@@ -25,7 +25,7 @@ class BestDeals extends StatelessWidget{
                 title: 'Auto Loan',
                 bankName: 'Bank of Baroda',
                 amount: '5,50,000',
-                monthlyInstalment: '5,000',
+                monthlyInstalment: '12,514.00',
                 rate: '13',
                 duration: '5',
                 bankIcon: 'assets/images/baroda.png'
